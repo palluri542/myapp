@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link href='http://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+        <link href='style.css' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        <div class="tabbed-navigation"><!-- .tabbed-navigation -->
+            <ul>
+                <li><a href="#" class="active">Clients</a></li>
+                <li><a href="#">FTP Hosts</a></li>
+                <li><a href="#">Exchanges</a></li>
+            </ul>
+        </div><!-- .tabbed-navigation -->
+        <div class="controls"><!-- .controls -->
+            <ul>
+                <li><input type="text" placeholder="search for a client"></li>
+                <li><a href="#">Add</a></li>
+                <li><a href="#">Delete</a></li>
+                <li><a href="#">Edit</a></li>
+                <li><a href="#">Export as excel</a></li>
+            </ul>
+        </div><!-- .controls -->
+        <div class="application"><!--.application-->
+            <div class="client-list"><!-- client-list -->
+                <table>
+                    <tr>
+                        <td>CLient Name</td>
+                        <td>Expected</td>
+                        <td>Outstanding</td>
+                    </tr>
+                </table>
+            </div><!-- client-list -->
+            <div class="summary"><!--summary-->
+                <div class="client-summary box">
+                    <p>Summary of $Client on $Date</p>
+                    <p>Expected: 00 | Received: 00 | Passed: 00 | Failed: 00 | Outstanding: 00 | <button>Email Client</button> </p>
+                </div>
+                <div class="error-list box">
+                    aa
+                </div>
+                <div class="client-log-files box">
+                    aa
+                </div>
+            </div><!--summary-->
+        </div>
+        <!--.application-->
+    </body>
+</html>
