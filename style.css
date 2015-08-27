@@ -1,0 +1,168 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Roboto Slab;
+}
+.box{
+    box-sizing: border-box;
+    padding: 5px;
+    border: 1px solid #BBB;
+    background: #fff;
+    margin: 0 0 5px 0;
+}
+/*.tabbed-navigation*/
+.tabbed-navigation{
+    background: #383636;
+    height: 40px;
+}
+.tabbed-navigation ul{
+    line-height: 40px;
+    margin: 0 10px;
+}
+.tabbed-navigation li{
+    display: inline;
+}
+.tabbed-navigation li a{
+    padding: 4px 10px;
+    color: #FF5A0B;
+}
+.tabbed-navigation li .active{
+    background: #806F66;
+    color: #FFF;
+    border-radius: 3px;
+}
+/*.tabbed-navigation*/
+
+/*.controls*/
+.controls{
+    background: #FFF2BC;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 2px solid #44749D;
+}
+.controls li{
+    display: inline;
+    padding: 5px;
+}
+.controls li a{
+    color: #FF5A0B;
+}
+.controls input{
+    line-height: 25px;
+    width: 320px;
+}
+/*.controls*/
+
+
+/*.application*/
+.application{
+    background: #FFF;
+    position: absolute;
+    top: 80px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+/*.client-list*/
+.client-list{
+    /*background: #C6D4E1;*/
+    background: #FFF;
+    width: 350px;
+    padding: 5px;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    font-size: 13px;
+    overflow: auto;
+    box-sizing: border-box;
+    border-right: 5px solid #383636;
+}
+/*.clients*/
+.clients{
+    overflow: auto;
+    position: absolute;
+    top: 5px;
+    bottom: 150px;
+    left: 5px;
+    right: 5px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #383636;
+    color: #383636;
+}
+.clients th{
+    background: #383636;
+    color: #FFF;
+}
+.clients table th, .clients table td{
+    padding: 10px 15px;
+}
+.clients table tr:nth-child(even){
+    /*background: #e2dcdc;*/
+}
+.clients table .OK{
+    background: #e3fce8;
+    box-sizing: border-box;
+    border-left: 5px solid #2ECC40;
+    border-bottom: 3px solid #FFF;
+    /*border-top: 1px solid #2ECC40;*/
+    /*border-right: 2px solid #2ECC40;*/
+}
+.clients table .OF, .clients table .FE, .clients table .EO{
+    background: #fcd8d6;
+    box-sizing: border-box;
+    border-left: 5px solid #FF4136;
+    border-bottom: 3px solid #FFF;
+    /*border-top: 1px solid #FF4136;*/
+    /*border-right: 2px solid #FF4136;*/
+}
+/*.clients*/
+/*.filters*/
+.filters{
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    right: 5px;
+    height: 140px;
+    background: #CCC;
+    padding: 10px 5px;
+}
+.filters p{
+    border-bottom: 1px solid #BBB;
+}
+/*.filters*/
+/*.client-list*/
+
+/*.client-summary*/
+.client-summary{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 350px;
+    right: 0;
+    background: #DDD;
+    padding: 5px;
+    font-size: 12px;
+}
+.client-summary table{
+    width: 100%;
+}
+.client-summary table td, .client-summary table th{
+    padding: 10px 15px;
+}
+.client-summary th{
+    background: #CCC;
+}
+.client-summary tr:nth-child(even){
+    background: #EEE;
+}
+.file-data, .files-list{
+    height: 41vh;
+}
+
+/*.client-summary*/
+
+/*.application*/
