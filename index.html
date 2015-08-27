@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link href='http://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+        <link href='styles/style.css' rel='stylesheet' type='text/css'>
+        <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+        <script src="scripts/script.js"></script>
+    </head>
+    <body ng-app="myApp" ng-controller="controller">
+        <div class="tabbed-navigation"><!-- .tabbed-navigation -->
+            <ul>
+                <li><a href="#" class="active">Clients</a></li>
+                <li><a href="#">FTP Hosts</a></li>
+                <li><a href="#">Exchanges</a></li>
+            </ul>
+        </div><!-- .tabbed-navigation -->
+        <div class="controls"><!-- .controls -->
+            <ul>
+                <li><input type="text" placeholder="search for a client" ng-model="byClientName.clientName"></li>
+                <li><a href="#">Add</a></li>
+                <li><a href="#">Delete</a></li>
+                <li><a href="#">Edit</a></li>
+                <li><a href="#">Export as excel</a></li>
+            </ul>
+        </div><!-- .controls -->
+        <div class="application"><!-- .application -->
+            <div class="client-list">
+                <div class="clients">
+                    <table style="width: 100%">
+                        <tr>
+                            <th>Client Name</th>
+                            <th>Status</th>
+                        </tr>
+                        <tr ng-repeat="clients in clientList | filter:byClientName | filter:byStatus"  class="{{clients.status}}" ng-click="showDetails(clients.clientID)">
+                            <td>{{clients.clientName}}</td>
+                            <td>{{clients.status}}</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="filters">
+                    <p>Filters</p>
+                    <p><input type="radio" name="client-list-filter" value="" ng-model="byStatus.status" checked=""/>All [Default]</p>
+                    <p><input type="radio" name="client-list-filter" value="!ok" ng-model="byStatus.status" />Errors</p>
+                    <p><input type="radio" name="client-list-filter" value="open"/>Open</p>
+                </div>
+            </div>
+            <div class="client-summary">
+                <div class="box summary">
+                    <p>Summary of {{clientName}}</p>
+                    <p>Expected: {{expected}} | Received: {{received}} | Failed: {{failed}}</p>
+                </div>
+                <div class="box file-data">
+                    <p>File Status</p>
+                    <table>
+                        <tr>
+                            <th>Line Numbers</th>
+                            <th>Message</th>
+                            <th>Resolution Messages</th>
+                        </tr>
+                        <tr ng-repeat="errors in error">
+                            <td>{{errors.lineNumbers}}</td>
+                            <td>{{errors.message}}</td>
+                            <td>{{errors.resolutionMessage}}</td>
+                        </tr>
+                    </table>
+                    <button ng-click="showText=!showText">Add Notes</button>
+                    <div ng-show="showText" style="margin: 10px 0">
+                        <textarea rows="3" cols="100"></textarea>
+                    </div>
+                </div>
+                <div class="box files-list">
+                    <p>Files</p>
+                    <table>
+                        <tr>
+                            <th>File Name</th>
+                            <th>Date created</th>
+                            <th>Processing Date</th>
+                        </tr>
+                        <tr ng-repeat="fileList in files" ng-click="getFileData(fileList.fileName)">
+                            <td>{{fileList.fileName}}</td>
+                            <td>{{fileList.dateCreated}}</td>
+                            <td>{{fileList.processingDate}}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div><!-- .application -->
+    </body>
+</html>
