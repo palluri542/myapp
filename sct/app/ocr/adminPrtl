@@ -1,0 +1,41 @@
+<div class="ocr-tools" ng-controller="ToolsCtrl"> 
+    <div class="ocr-tools-table">
+        <div class="ocr-tools-row">
+            <div class="ocr-tools-cellLeft">
+                <button  class="ocr-tools-button" ng-click="pauseTriggerSubmission()">
+                    Pause Trigger Submission Schedule</button>
+            </div>
+            <div class="ocr-tools-cellMiddle">
+                <label></label>
+            </div>
+            <div class="ocr-tools-cellRight">
+                <label class="ocr-tools-label">{{pauseTriggerSubmissionResult}}</label>
+            </div>
+        </div>
+        <div class="ocr-tools-row">
+            <div class="ocr-tools-cellLeft">
+                <button  class="ocr-tools-button" ng-click="resumeTriggerSubmission()">
+                    Resume Trigger Submission Schedule (Does NOT force a resend)</button>
+            </div>
+            <div class="ocr-tools-cellMiddle">
+                <label></label>
+            </div>
+            <div class="ocr-tools-cellRight">
+                <label class="ocr-tools-label">{{resumeTriggerSubmissionResult}}</label>
+            </div>
+        </div>
+        <div class="ocr-tools-row">
+            <div class="ocr-tools-cellLeft">
+                <button  class="ocr-tools-button" ng-click="submitGmiTriggers()">
+                    Submit GMI Triggers to FIA</button>
+            </div>
+            <div class="ocr-tools-cellMiddle">
+                <label></label>
+            </div>
+            <div class="ocr-tools-cellRight">
+                <label class="ocr-tools-label">{{submitGmiTriggersResult}}</label>
+            </div>
+        </div>
+    </div>
+</div>
+
