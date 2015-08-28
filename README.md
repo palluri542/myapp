@@ -25,6 +25,26 @@ REST Calls
 @POST
 @Path("/systemProfile")
     public SystemUserProfile systemProfile(SystemProfileRequest req)
+    
+    
+    
+    /*****************************************
+    Node installation 
+    insatll node.exe  
+    navigate to project folder by command prompt 
+     enter npm init 
+     
+     npm install express
+     node server 
+     goto browser and type localhost:8000
+     
+    
+    and 
+    
+    
+    
+    
+    
 
 @POST
     @Path("/profile")
