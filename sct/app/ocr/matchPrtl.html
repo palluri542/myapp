@@ -1,0 +1,187 @@
+<div class="ocr-match">
+    <div class="ocr-match-list-table">
+        <div class="ocr-match-row">
+            <div class="ocr-match-cell">
+                <button  ng-click="getFiaList()">
+                    FIA Legal Entity</button>
+            </div>
+            <div class="ocr-match-cell">
+                <label>NCR Legal Entity</label>
+
+            </div>
+        </div>
+        <div class="ocr-match-row">
+            <div class="ocr-match-cell">
+                <select  class="ocr-match-textbox" size="20"
+                         ng-change="fiaSelectAction()"
+                         ng-model="selectedFiaItem"
+                         ng-options="fia as fia.profileName for fia in fiaProfileList">
+                </select>
+            </div>
+            <div class="ocr-match-cell2">
+                <select  size="20"
+                         ng-model="selectedNcrEntity"
+                         ng-options="ncr as ncr.legalName for ncr in ncrProfileList">
+                </select>
+            </div>
+        </div>
+        <!-- Now the detail  One row of two tables-->
+        <div class="ocr-match-row">
+            <div class="ocr-match-cell">
+                <div class="ocr-match-list-table">
+                    <div class="ocr-match-row">
+                        <div class="ocr-match-cell">
+                            <label>Fia Entity Details</label>
+                        </div>
+                    </div>
+                    <div class="ocr-match-row">
+                        <div class="ocr-match-cell">
+                            <label for="fiaOcrProfileId">OCR Profile Id:</label>
+                        </div>
+                        <div class="ocr-match-cell">
+                            <input class="ocr-match-textbox" id="fiaLei" name="fiaOcrProfileId" type="text"
+                                   ng-model="fiaLegalEntity.ocrProfileId"/>
+                        </div>
+                    </div>
+                    <div class="ocr-match-row">
+                        <div class="ocr-match-cell">
+                            <label for="fiaLei">Lei:</label>
+
+                        </div>
+                        <div class="ocr-match-cell">
+                            <input class="ocr-match-textbox" id="fiaLei" name="fiaLei" type="text"
+                                   ng-model="fiaLegalEntity.lei"/>
+                        </div>
+                    </div>
+                    <div class="ocr-match-row">
+                        <div class="ocr-match-cell">
+                            <label for="fiaNfa">NFA Id:</label>
+                        </div>
+                        <div class="ocr-match-cell">
+
+                            <input class="ocr-match-textbox" id="fiaNfa" name="fiaNfa" type="text"
+                                   ng-model="fiaLegalEntity.nfaIdentifier"/>
+                        </div>
+                    </div>
+                    <div class="ocr-match-row">
+                        <div class="ocr-match-cell">
+                            <label for="fiaAddr1">Address1:</label>
+                        </div>
+                        <div class="ocr-match-cell">
+
+                            <input class="ocr-match-textbox" id="fiaAddr1" name="fiaAddr1" type="text"
+                                   ng-model="fiaLegalEntity.addr1"/>
+                        </div>
+                    </div>
+                    <div class="ocr-match-row">
+                        <div class="ocr-match-cell">
+                            <label for="fiaAddr2">Address2:</label>
+                        </div>
+                        <div class="ocr-match-cell">
+
+                            <input class="ocr-match-textbox" id="fiaAddr2" name="fiaAddr2" type="text"
+                                   ng-model="fiaLegalEntity.addr2"/>
+                        </div>
+                    </div>
+                    <div class="ocr-match-row"> 
+                        <div class="ocr-match-cell">
+                            <label for="fiaCity">City:</label> 
+                        </div>
+                        <div class="ocr-match-cell">                                            
+                            <input class="ocr-match-textbox" id="fiaCity" name="fiaCity" type="text"
+                                   ng-model="fiaLegalEntity.city"/>
+                        </div>
+                    </div>
+                    <div class="ocr-match-row"> 
+                        <div class="ocr-match-cell">
+                            <label for="fiaCountry">Country:</label>
+                        </div>
+                        <div class="ocr-match-cell">                                            
+                            <input class="ocr-match-textbox" id="fiaCountry" name="fiaCountry" type="text"
+                                   ng-model="fiaLegalEntity.country"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ocr-match-cell">
+                <div class="ocr-match-list-table">
+                    <div class="ocr-match-row"> 
+                        <div class="ocr-match-cell">
+                            <label>Ncr Entity Details</label>
+                        </div>
+                    </div>
+                    <div class="ocr-match-row"> 
+                        <div class="ocr-match-cell">
+                            <label for="ncrOcrProfileId">OCR Profile Id:</label>
+                        </div>
+                        <div class="ocr-match-cell">                  
+
+                            <input class="ocr-match-textbox" id="ncrOcrProfileId" name="ncrOcrProfileId" type="text"
+                                   ng-model="selectedNcrEntity.ocrProfileId"/>
+                        </div>
+                    </div>
+                    <div class="ocr-match-row"> 
+                        <div class="ocr-match-cell">
+                            <label for="fiaLei">Lei:</label>                             
+                        </div>
+                        <div class="ocr-match-cell">                  
+                            <input class="ocr-match-textbox" id="fiaLei" name="fiaLei" type="text"
+                                   ng-model="selectedNcrEntity.lei"/>
+                        </div>
+                    </div>
+                    <div class="ocr-match-row"> 
+                        <div class="ocr-match-cell">
+                            <label for="fiaNfa">NFA Id:</label>                
+                        </div>
+                        <div class="ocr-match-cell">                                            
+                            <input class="ocr-match-textbox" id="fiaNfa" name="fiaNfa" type="text"
+                                   ng-model="selectedNcrEntity.nfaIdentifier"/>
+                        </div>
+                    </div>
+                    <div class="ocr-match-row"> 
+                        <div class="ocr-match-cell">
+                            <label for="fiaAddr1">Address1:</label>         
+                        </div>
+                        <div class="ocr-match-cell">                                            
+                            <input class="ocr-match-textbox" id="fiaAddr1" name="fiaAddr1" type="text"
+                                   ng-model="selectedNcrEntity.addr1"/>
+                        </div>
+                    </div>
+                    <div class="ocr-match-row"> 
+                        <div class="ocr-match-cell">
+                            <label for="fiaAddr2">Address2:</label>     
+                        </div>
+                        <div class="ocr-match-cell">                                            
+                            <input class="ocr-match-textbox" id="fiaAddr2" name="fiaAddr2" type="text"
+                                   ng-model="selectedNcrEntity.addr2"/>
+                        </div>
+                    </div>
+                    <div class="ocr-match-row"> 
+                        <div class="ocr-match-cell">
+                            <label for="fiaCity">City:</label> 
+                        </div>
+                        <div class="ocr-match-cell">                                            
+                            <input class="ocr-match-textbox" id="fiaCity" name="fiaCity" type="text"
+                                   ng-model="selectedNcrEntity.city"/>
+                        </div>
+                    </div>
+                    <div class="ocr-match-row"> 
+                        <div class="ncr-match-cell">
+                            <label for="ncrCountry">Country:</label>
+                        </div>
+                        <div class="ocr-match-cell">                                            
+                            <input  class="ocr-match-textbox" name="ncrCountry" type="text"
+                                    ng-model="selectedNcrEntity.country"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<div id="assignButtonDiv">
+    <button ng-click="commitMatchAction()" id="assignButton">Assign FIA Entity to NCR Entity(s)</button>
+</div>
