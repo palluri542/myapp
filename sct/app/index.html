@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en" ng-app="ocrApp">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href="components/uigrid/ui-grid.css">
+        <link rel="stylesheet" href="components/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" href="css/ocr_match.css">
+        <link rel="stylesheet" href="css/ocr_status.css">
+        <link rel="stylesheet" href="css/ocr_tabs.css">
+        <link rel="stylesheet" href="css/ocr_tools.css">
+        <link rel="stylesheet" href="css/shell.css">
+        <script src="components/angular/angular.js"></script>
+        <script src="http://angular-ui.github.io/ui-router/release/angular-ui-router.min.js"></script>
+        <script src="components/angular-resource/angular-resource.js"></script>
+        <script src="components/angular-route/angular-route.js"></script>
+        <script src="components/jquery/dist/jquery.js"></script>
+        <script src="components/uigrid/ui-grid.js"></script>
+        <script src="components/ui-bootstrap/ui-bootstrap-tpls-0.11.0.min.js"></script>
+        <script src="main/mainModule.js"></script>
+        <script src="common/services/ocrDataService.js"></script>
+        <script src="ocr-accounts/acctsModule.js"></script>
+        <script src="ocr-profiles/profilesModule.js"></script>       
+        <script src="ocr/adminModule.js"></script> 
+        <script src="ocr/matchModule.js"></script>
+        <script src="ocr/openMatchModule.js"></script>
+        <script src="ocr/ocrModule.js"></script>
+        <script src="ocr/saMatchModule.js"></script>
+        <script src="ocr/scheduleModule.js"></script>    
+        <script src="ocr/statusModule.js"></script>    
+        <script src="ocr/toolsModule.js"></script> 
+        <title>OCR Portal</title>
+    </head>
+    <body>
+        <div class="shell-main">
+            <div class="shell-head">
+                <img src="img/sg.png" alt="SocGen">                     
+            </div>
+            <div class="shell-main">
+                <div class="shell-main-nav" ng-controller="PortalNavCtrl">
+                    <ul class="shell-main-nav">
+                    <li>
+                        <button ng-class="{'buttonSelected': ocrSelectionStyle, 'buttonNotSelected': !ocrSelectionStyle}"
+                                ng-click="selectOcr()"
+                                ui-sref="ocr"
+                                >
+                                
+                            OCR 
+                        </button>
+                    </li>
+                    <li>
+                        <button 
+                                ui-sref="ltrp"
+                                ng-click="selectLtrp()"
+                                ng-class="{'buttonSelected': ltrpSelectionStyle, 'buttonNotSelected': !ltrpSelectionStyle}">
+                            LTRP
+                        </button>
+                    </li>
+    <!--
+                
+            -->            
+                </ul>
+                </div>
+                <div class="shell-main-content" ui-view>
+                     
+                </div>
+            </div>
+            <div class="shell-footer"></div>
+        </div>  
+            
+    </body>
+
+
+</html>
