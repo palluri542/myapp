@@ -1,0 +1,10 @@
+angular>
+angular-bootstrap>
+angular-mocks>
+angular-resource>
+angular-route>
+bootstrap>
+jquery>
+pdfmake>
+ui-bootstrap>
+uigrid>
