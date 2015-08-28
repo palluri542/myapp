@@ -1,0 +1,132 @@
+<div class="ocr-match">
+    <div class="ocr-match-list-container">
+        <div class="ocr-match-row-header">
+            <div class="ocr-match-cell">
+                <button  ng-click="getFiaList()">
+                    FIA Legal Entity</button>
+            </div>
+            <div class="ocr-match-cell">
+                <label>NCR Legal Entity</label>
+
+            </div>
+        </div>
+        <div class="ocr-match-row">
+            <div class="ocr-match-row-cell">
+                <select class="ocr-match-fialist-content-list" size="15"
+                        ng-change="fiaSelectAction()"
+                        ng-model="selectedFiaItem"
+                        ng-options="fia as fia.fullName for fia in fiaProfileList">          
+                </select>
+            </div>
+            <div class="ocr-match-row-cell">
+                <select class="ocr-match-fialist-content-entry" size="15"
+                        ng-model="selectedNcrEntity"
+                        ng-options="ncr as ncr.legalName for ncr in ncrProfileList">
+                </select>
+            </div>
+        </div>
+
+    </div>
+
+
+    <table class="equalSpace" border="0">
+        <tr>
+            <th>FIA Legal Entity</th>
+            <th>NCR Legal Entity</th>
+        </tr>
+
+        <tr>
+            <td width="50%">
+                <div id="status2">
+                    <fieldset>
+                        <legend>FIA Entity Details</legend>
+                        <ol>
+                            <li>
+                                <label for="fiaOcrProfileId">OCR Profile Id:</label>
+                                <input id="fiaLei" name="fiaOcrProfileId" type="text"
+                                       ng-model="fiaLegalEntity.ocrProfileId"/>
+                            </li>
+                            <li>
+                                <label for="fiaLei">Lei:</label>
+                                <input id="fiaLei" name="fiaLei" type="text"
+                                       ng-model="fiaLegalEntity.lei"/>
+                            </li>
+                            <li>
+                                <label for="fiaNfa">NFA Id:</label>
+                                <input id="fiaNfa" name="fiaNfa" type="text"
+                                       ng-model="fiaLegalEntity.nfaIdentifier"/>
+                            </li>
+                            <li>
+                                <label for="fiaAddr1">Addr1:</label>
+                                <input id="fiaAddr1" name="fiaAddr1" type="text"
+                                       ng-model="fiaLegalEntity.addr1"/>
+                            </li>
+                            <li>
+                                <label for="fiaAddr2">Addr2:</label>
+                                <input id="fiaAddr2" name="fiaAddr2" type="text"
+                                       ng-model="fiaLegalEntity.addr2"/>
+                            </li>
+                            <li>
+                                <label for="fiaCity">City:</label>
+                                <input id="fiaCity" name="fiaCity" type="text"
+                                       ng-model="fiaLegalEntity.city"/>
+                            </li>
+                            <li>
+                                <label for="fiaCountry">Country:</label>
+                                <input id="fiaCountry" name="fiaCountry" type="text"
+                                       ng-model="fiaLegalEntity.country"/>
+                            </li>
+                        </ol>
+                    </fieldset>
+                </div>
+            </td>
+            <td width="50%">
+                <div id="status2">
+                    <fieldset>
+                        <legend>Suggested NCR Entity Details</legend>
+                        <ol>
+                            <li>
+                                <label for="ncrOcrProfileId">OCR Profile Id:</label>
+                                <input id="ncrOcrProfileId" name="ncrOcrProfileId" type="text"
+                                       ng-model="selectedNcrEntity.ocrProfileId"/>
+                            </li>
+
+                            <li>
+                                <label for="ncrLei">Lei:</label>
+                                <input id="ncrLei" name="ncrLei" type="text"
+                                       ng-model="selectedNcrEntity.lei"/>
+                            </li>
+                            <li>
+                                <label for="ncrNfa">NFA Id:</label>
+                                <input id="ncrNfa" name="ncrNfa" type="text"
+                                       ng-model="selectedNcrEntity.nfaIdentifier"/>
+                            </li>
+                            <li>
+                                <label for="ncrAddr1">Addr1:</label>
+                                <input id="ncrAddr1" name="ncrAddr1" type="text"
+                                       ng-model="selectedNcrEntity.addr1"/>
+                            </li>
+                            <li>
+                                <label for="ncrAddr2">Addr2:</label>
+                                <input id="ncrAddr2" name="ncrAddr2" type="text"
+                                       ng-model="selectedNcrEntity.addr2"/>
+                            </li>
+                            <li>
+                                <label for="ncrCity">City:</label>
+                                <input id="ncrCity" name="ncrCity" type="text"
+                                       ng-model="selectedNcrEntity.city"/>
+                            </li>
+                            <li>
+                                <label for="ncrCountry">Country:</label>
+                                <input id="ncrCountry" name="ncrCountry" type="text"
+                                       ng-model="selectedNcrEntity.country"/>
+                            </li>
+                        </ol>
+                    </fieldset>
+                </div>
+            </td>
+    </table>
+</div>
+<div id="assignButtonDiv">
+    <button ng-click="commitMatchAction()" id="assignButton">Assign FIA Entity to NCR Entity(s)</button>
+</div>
