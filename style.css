@@ -166,3 +166,6 @@ body{
 /*.client-summary*/
 
 /*.application*/
+.selected {
+  background-color: #2ECC40 !important;
+}
