@@ -1,0 +1,44 @@
+[
+    {
+        "clientID": 1,
+        "clientName": "Quantitative Investment Management (QIM)",
+        "clientState": "OK",
+        "latestIncompleteDate": "11-12-2015"
+    },
+    {
+        "clientID": 2,
+        "clientName": "Arbillion Capital AG",
+        "clientState": "OF",
+        "latestIncompleteDate": "11-13-2015"
+    },
+    {
+        "clientID": 3,
+        "clientName": "Banco Inbursa",
+        "clientState": "FE",
+        "latestIncompleteDate": "11-14-2015"
+    },
+    {
+        "clientID": 4,
+        "clientName": "GROUPE FINANCIER ARB I/MON",
+        "clientState": "OK",
+        "latestIncompleteDate": "11-12-2015"
+    },
+    {
+        "clientID": 5,
+        "clientName": "Quantitative Investment Management (QIM)",
+        "clientState": "EO",
+        "latestIncompleteDate": "11-12-2015"
+    },
+    {
+        "clientID": 6,
+        "clientName": "Quantitative Investment",
+        "clientState": "EO",
+        "latestIncompleteDate": "11-12-2015"
+    },
+    {
+        "clientID": 7,
+        "clientName": "Quantitative Management (QIM)",
+        "clientState": "OK",
+        "latestIncompleteDate": "11-12-2015"
+    }
+]
