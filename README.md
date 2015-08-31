@@ -22,6 +22,26 @@ Updated clientlist json file format
 // when radio button open is selected, all the clients with "latestIncompleteDate" for the last 'x' days has to be filtered.
 // 'x' is user changable
 
+
+#Tasks to finish:
+1) Modal window for each client - get data from Rest call and need an edit button to edit the content in the modal window and have to post that data to backend
+
+2)Add note - Each file have some notes available, need to display that notes for each file and can be able to add new notes.
+    
+    POST - 
+        Integer clientId;
+        String clientName;    
+        String fname;  
+        String createdBy;
+        Date createdOn;
+        String note;
+    GET - 
+        clientID,
+        fileName,
+        List<Notes>
+
+3)Open files Radio button filter
+
 -----------------------------------------Aug 31st-----------------------------------------------
 
 
