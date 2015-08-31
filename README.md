@@ -1,4 +1,30 @@
 # myapp
+
+------------------------------------Aug 31st---------------------------------------------
+// Aug 31st
+
+Updated clientlist json file format
+
+{
+    "clientID": 1,
+    "clientName": "Quantitative Investment Management (QIM)",
+    "clientState": "OK",
+    "latestIncompleteDate": "11-12-2015"
+},
+{
+    "clientID": 2,
+    "clientName": "Banco Inbursa",
+    "clientState": "OF",
+    "latestIncompleteDate": "11-13-2015"
+},
+
+
+// when radio button open is selected, all the clients with "latestIncompleteDate" for the last 'x' days has to be filtered.
+// 'x' is user changable
+
+-----------------------------------------Aug 31st-----------------------------------------------
+
+
 Scotts Email
 
 So I'll send you a list of clientDetail objects:
