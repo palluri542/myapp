@@ -1,0 +1,93 @@
+[
+    {
+        "clientID": 1,
+        "fileName": "file-11",
+        "dateCreated": "11-11-11",
+        "processingDate": "22-22-22",
+        "errors": [
+            {
+                "lineNumbers": "1,2,3",
+                "message": "not yet received",
+                "resolutionMessage": "Some resolution Msg1"
+            }
+        ]
+    },
+    {
+        "clientID": 2,
+        "fileName": "file-12",
+        "dateCreated": "11-11-11",
+        "processingDate": "22-22-22",
+        "errors": [
+            {
+                "lineNumbers": "1,2,3",
+                "message": "not yet received",
+                "resolutionMessage": "Some resolution Msg2"
+            }
+        ]
+    },
+    {
+        "clientID": 1,
+        "fileName": "file-13",
+        "dateCreated": "11-11-11",
+        "processingDate": "22-22-22",
+        "errors": [
+            {
+                "lineNumbers": "1,2,3",
+                "message": "not yet received",
+                "resolutionMessage": "This is for file 13"
+            }
+        ]
+    },
+    {
+        "clientID": 4,
+        "fileName": "file-14",
+        "dateCreated": "11-11-11",
+        "processingDate": "22-22-22",
+        "errors": [
+            {
+                "lineNumbers": "1,3",
+                "message": "not yet received",
+                "resolutionMessage": "This is for file 14"
+            }
+        ]
+    },
+    {
+        "clientID": 5,
+        "fileName": "file-15",
+        "dateCreated": "11-11-11",
+        "processingDate": "22-22-22",
+        "errors": [
+            {
+                "lineNumbers": "1,2,3",
+                "message": "not yet received",
+                "resolutionMessage": "This is for file 15"
+            }
+        ]
+    },
+    {
+        "clientID": 6,
+        "fileName": "file-16",
+        "dateCreated": "11-11-11",
+        "processingDate": "22-22-22",
+        "errors": [
+            {
+                "lineNumbers": "1,2,3",
+                "message": "not yet received",
+                "resolutionMessage": "Some resolution Msg6"
+            }
+        ]
+    },
+    {
+        "clientID": 7,
+        "fileName": "file-17",
+        "dateCreated": "11-11-11",
+        "processingDate": "22-22-22",
+        "errors": [
+            {
+                "lineNumbers": "1,2,3",
+                "message": "not yet received",
+                "resolutionMessage": "Some resolution Msg7"
+            }
+        ]
+    }
+]
