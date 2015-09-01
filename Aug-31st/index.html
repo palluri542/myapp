@@ -77,47 +77,106 @@
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                    <h4 class="modal-title">{{clientName}}</h4>
+                                    <h4 class="modal-title">{{clientInfo.clientName}}</h4>
                                 </div>
                                 <div class="modal-body">
                                     <table>
                                         <tr>
                                             <td>Client Name</td>
-                                            <td contenteditable="true">{{clientName}}</td>
+                                            <td contenteditable="true">
+											<div ng-if="!IsEditMode">
+												{{clientInfo.clientName}}
+											</div>
+											<div ng-if="IsEditMode">
+												<input type="text" ng-model="clientInfo.clientName" />
+											</div>
+											
+											</td>
                                         </tr>
                                         <tr>
                                             <td>Server Address</td>
-                                            <td>{{server}}</td>
+                                            <td>
+											<div ng-if="!IsEditMode">
+												{{clientInfo.server}}
+											</div>
+											<div ng-if="IsEditMode">
+												<input type="text" ng-model="clientInfo.server" />
+											</div>
+											</td>
                                         </tr>
                                         <tr>
                                             <td>Directory Path</td>
-                                            <td>{{dirPath}}</td>
+                                            <td>
+											<div ng-if="!IsEditMode">
+												{{clientInfo.dirPath}}
+											</div>
+											<div ng-if="IsEditMode">
+												<input type="text" ng-model="clientInfo.dirPath" />
+											</div>
+											</td>
                                         </tr>
                                         <tr>
                                             <td>Expected File Count</td>
-                                            <td>{{expFileCnt}}</td>
+                                            <td>
+											<div ng-if="!IsEditMode">
+												{{clientInfo.expFileCnt}}
+											</div>
+											<div ng-if="IsEditMode">
+												<input type="text" ng-model="clientInfo.expFileCnt" />
+											</div>
+											</td>
                                         </tr>
                                         <tr>
                                             <td>Expected start time</td>
-                                            <td>{{expStartTime}}</td>
+                                            <td>
+											<div ng-if="!IsEditMode">
+												{{clientInfo.expStartTime}}
+											</div>
+											<div ng-if="IsEditMode">
+												<input type="text" ng-model="clientInfo.expStartTime" />
+											</div>
+											</td>
                                         </tr>
                                         <tr>
                                             <td>Expected end time</td>
-                                            <td>{{expEndTime}}</td>
+                                            <td>
+											<div ng-if="!IsEditMode">
+												{{clientInfo.expEndTime}}
+											</div>
+											<div ng-if="IsEditMode">
+												<input type="text" ng-model="clientInfo.expEndTime" />
+											</div>
+											</td>
                                         </tr>
                                         <tr>
                                             <td>Interval</td>
-                                            <td>{{interval}}</td>
+                                            <td>
+											<div ng-if="!IsEditMode">
+												{{clientInfo.interval}}
+											</div>
+											<div ng-if="IsEditMode">
+												<input type="text" ng-model="clientInfo.interval" />
+												
+												{{clientInfo.interval}}
+											</div>
+											</td>
                                         </tr>
                                         <tr>
                                             <td>FTP ID</td>
-                                            <td>{{ftpId}}</td>
+                                            <td>
+											<div ng-if="!IsEditMode">
+												{{clientInfo.ftpId}}
+											</div>
+											<div ng-if="IsEditMode">
+												<input type="text" ng-model="clientInfo.ftpId" />
+											</div>
+											</td>
                                         </tr>
                                     </table>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary">Edit</button>
-                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                    <button type="button" ng-show="showEditbutton" class="btn btn-primary" ng-click="EnableClientDetails()" >Edit</button>
+                                    <button type="button" ng-show="showSavebutton"  ng-click="UpdateClientDetails(clientInfo)" class="btn btn-primary">Save changes</button>
                                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                                 </div>
                             </div>
@@ -171,8 +230,8 @@
                         </tr>
                         <tr ng-repeat="fileList in files" ng-click="getFileData(fileList.fileName)">
                             <td>{{fileList.fileName}}</td>
-                            <td>{{fileList.dateCreated}}</td>
-                            <td>{{fileList.processingDate}}</td>
+                            <td>{{fileList.receivedTime}}</td>
+                            <td>{{fileList.processedTime}}</td>
                         </tr>
                         <tr >
                             <td colspan="3" style="text-align:center;" ng-show="files.length == 0 || files === ''">
