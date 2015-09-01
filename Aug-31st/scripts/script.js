@@ -23,6 +23,7 @@ app.controller('controller', function ($scope, ClientService) {
     $scope.failed = "00";
     $scope.files = [];
     $scope.SelectedclientID = 0;
+	
 
     $scope.showDetails = function (clientID) {
         $scope.getSummary(clientID);
@@ -30,20 +31,27 @@ app.controller('controller', function ($scope, ClientService) {
         $scope.error = [];
         $scope.SelectedclientID = clientID;
     };
+	$scope.EnableClientDetails =function()
+	{
+		$scope.IsEditMode = true;
+		$scope.showEditbutton = false;
+		$scope.showSavebutton = true;
+	}
+	$scope.UpdateClientDetails =function(clientInfo)
+	{
+		debugger;
+		angular.element(document.getElementById("clientProfile")).scope().clientInfo = clientInfo;
+		$scope.IsEditMode = false;
+		$scope.showEditbutton = true;
+		$scope.showSavebutton = false;
+	}
+	
 
     $scope.getClientInfo = function (clientID) {
-        console.log(clientID);
         ClientService.getClientInfo().success(function (res) {
-            $scope.clientInfo = res;
-            $scope.clientID = $scope.clientInfo[clientID-1].clientID;
-            $scope.clientName = $scope.clientInfo[clientID-1].clientName;
-            $scope.server = $scope.clientInfo[clientID-1].server;
-            $scope.dirPath = $scope.clientInfo[clientID-1].dirPath;
-            $scope.expFileCnt = $scope.clientInfo[clientID-1].expFileCnt;
-            $scope.expStartTime = $scope.clientInfo[clientID-1].expStartTime;
-            $scope.expEndTime = $scope.clientInfo[clientID-1].expEndTime;
-            $scope.interval = $scope.clientInfo[clientID-1].interval;
-            $scope.ftpId = $scope.clientInfo[clientID-1].ftpId;
+            $scope.clientInfo = res[clientID-1];
+			$scope.showEditbutton = true;
+			$scope.showSavebutton = false;
         });
     };
 
@@ -56,7 +64,8 @@ app.controller('controller', function ($scope, ClientService) {
         });
     };
     $scope.getFilesList = function (clientID) {
-        ClientService.getFilesList().success(function (client) {
+        ClientService.getFileDetails().success(function (client) {
+			debugger;
             $scope.files = client[clientID - 1].files;
         });
     };
