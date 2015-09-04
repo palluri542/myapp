@@ -1,0 +1,62 @@
+[
+    {
+        "clientID": 1,
+        "clientName": "Quantitative Investment Management (QIM)",
+        "fileName": "File-1",
+        "currentStatus": "Status",
+        "recordCount": 22,
+        "receivedTime": "11-11-11 11:11:11",
+        "FileErrors": [
+            {
+                "recordNumber": 23,
+                "errorMessage": "Not Yet Received",
+                "theRecord": "the record"
+            },
+            {
+                "recordNumber": 2,
+                "errorMessage": "Not sent",
+                "theRecord": "the record Message"
+            },
+            {
+                "recordNumber": 23,
+                "errorMessage": "Not Yet Received",
+                "theRecord": "the record"
+            },
+            {
+                "recordNumber": 2,
+                "errorMessage": "Not sent",
+                "theRecord": "the record Message"
+            },
+            {
+                "recordNumber": 23,
+                "errorMessage": "Not Yet Received",
+                "theRecord": "the record"
+            },
+            {
+                "recordNumber": 2,
+                "errorMessage": "Not sent",
+                "theRecord": "the record Message"
+            },
+            {
+                "recordNumber": 23,
+                "errorMessage": "Not Yet Received",
+                "theRecord": "the record"
+            },
+            {
+                "recordNumber": 2,
+                "errorMessage": "Not sent",
+                "theRecord": "the record Message"
+            },
+            {
+                "recordNumber": 23,
+                "errorMessage": "Not Yet Received",
+                "theRecord": "the record"
+            },
+            {
+                "recordNumber": 2,
+                "errorMessage": "Not sent",
+                "theRecord": "the record Message"
+            }
+        ]
+    }
+]
