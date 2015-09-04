@@ -1,0 +1,46 @@
+[
+    {
+        "clientID": 1,
+        "clientName": "Quantitative Investment Management (QIM)",
+        "server": "Server Address",
+        "dirPath": "path/path/path",
+        "expFileCnt": 22,
+        "expStartTime": "11-11-11 11:11:11",
+        "expEndTime": "11-11-11 11:11:11",
+        "interval": 5,
+        "ftpId": "F1765VG"
+    },
+    {
+        "clientID": 2,
+        "clientName": "Arbillion Capital AG",
+        "server": "Server Address",
+        "dirPath": "path/path/path",
+        "expFileCnt": 22,
+        "expStartTime": "11-11-11 11:11:11",
+        "expEndTime": "11-11-11 11:11:11",
+        "interval": 5,
+        "ftpId": "F1765VG"
+    },
+    {
+        "clientID": 3,
+        "clientName": "Banco Inbursa",
+        "server": "Server Address",
+        "dirPath": "path/path/path",
+        "expFileCnt": 22,
+        "expStartTime": "11-11-11 11:11:11",
+        "expEndTime": "11-11-11 11:11:11",
+        "interval": 5,
+        "ftpId": "F1765VG"
+    },
+    {
+        "clientID": 4,
+        "clientName": "GROUPE FINANCIER ARB I/MON",
+        "server": "Server Address",
+        "dirPath": "path/path/path",
+        "expFileCnt": 22,
+        "expStartTime": "11-11-11 11:11:11",
+        "expEndTime": "11-11-11 11:11:11",
+        "interval": 5,
+        "ftpId": "F1765VG"
+    }
+]
